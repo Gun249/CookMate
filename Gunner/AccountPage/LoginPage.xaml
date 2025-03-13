@@ -19,7 +19,7 @@
         <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,*">
 
             <Label 
-                Text="Gunner"
+                Text="CookMate"
                 Grid.Row="0"
                 FontSize="50"
                 FontFamily="kanitBold"
@@ -27,15 +27,6 @@
                 TextColor="White"
                 HorizontalTextAlignment="Center"
                 Margin="0,20,0,-15"/>
-
-            <Label 
-                Text="X BAEBICAKX"
-                Grid.Row="1"
-                FontSize="35"
-                FontFamily="kanitMedium"
-                TextColor="#D33332"
-                HorizontalTextAlignment="End"
-                Margin="0,5,40,0"/>
 
 
             <Image 
