@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gunner.AccountPage.SignupPage"
+             Title="SignupPage">
+
+    <Grid RowDefinitions="auto, *">
+
+        <Grid Grid.Row="0"
+              HeightRequest="220"
+              BackgroundColor="#D3333C">
+
+
+            <Grid RowDefinitions="auto,*">
+                
+                <ImageButton
+                    Grid.Row="0"
+                    Source="back"
+                    WidthRequest="20"
+                    Clicked="ImageButton_Clicked"
+                    HeightRequest="70"
+                    HorizontalOptions="Start"
+                    Margin="20,5,0,0"/>
+
+                <Label 
+                    Grid.Row="1"
+                    Text="Create Your Account."
+                    WidthRequest="250"
+                    FontSize="45"
+                    FontFamily="kanitBold"
+                    HorizontalTextAlignment="Start"
+                    TextColor="#FFFFFF"
+                    Margin="0,0,90,0"/>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="1"
+              BackgroundColor="#E8E8E8"
+              RowDefinitions="auto,auto,auto,auto,auto,*"
+              ColumnDefinitions="*,*">
+
+            <Border     
+                 Grid.Row="0"
+                 Grid.ColumnSpan="2"
+                 HeightRequest="50"
+                 Margin="20,35,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                        Placeholder="Email"
+                        BackgroundColor="AliceBlue"
+                        Margin="15,2,0,0"
+                        FontFamily="kanitLight"
+                        x:Name="email">
+                </Entry>
+            </Border>
+
+            <Border     
+                 Grid.Row="1"
+                 Grid.Column="0"
+                 HeightRequest="50"
+                 Margin="20,30,10,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Firstname"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="FirstName">
+                </Entry>
+            </Border>
+
+            <Border     
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 HeightRequest="50"
+                 Margin="10,30,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Lastname"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="LastName">
+                </Entry>
+
+            </Border>
+
+
+            <Border     
+                 Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 HeightRequest="50"
+                 Margin="20,30,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Username"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="UserName">
+                </Entry>
+
+            </Border>
+
+            <Border     
+                 Grid.Row="3"
+                 Grid.ColumnSpan="2"
+                 HeightRequest="50"
+                 Margin="20,30,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Password"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="PassWord">
+                </Entry>
+
+            </Border>
+
+            <Border     
+                 Grid.Row="4"
+                 Grid.ColumnSpan="2"
+                 HeightRequest="50"
+                 Margin="20,30,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Confirm Password"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="ConfirmPassword">
+                </Entry>
+
+            </Border>
+
+
+            <Button
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                WidthRequest="300"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Create Account"
+                FontSize="18"
+                FontFamily="kanitMedium"
+                CornerRadius="15"
+                BackgroundColor="#D33332"
+                Margin="0,10,0,50"
+                Clicked="Button_Clicked">
+    
+            </Button>
+
+
+        </Grid>
+        
+        
+        
+    </Grid>
+</ContentPage>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gunner.AccountPage.LoginPage">
+
+    <Grid RowDefinitions="*">
+
+        <Image 
+            Grid.Row="0"
+            Source="cooking"
+            Aspect="AspectFill"
+            ></Image>
+
+        <Label 
+            Grid.Row="0"
+            BackgroundColor="Black"
+            Opacity="0.7"/>
+
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,*">
+
+            <Label 
+                Text="Gunner"
+                Grid.Row="0"
+                FontSize="50"
+                FontFamily="kanitBold"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                Margin="0,20,0,-15"/>
+
+            <Label 
+                Text="X BAEBICAKX"
+                Grid.Row="1"
+                FontSize="35"
+                FontFamily="kanitMedium"
+                TextColor="#D33332"
+                HorizontalTextAlignment="End"
+                Margin="0,5,40,0"/>
+
+
+            <Image 
+                Source="cooking"
+                Grid.Row="2"
+                HeightRequest="200"
+                Aspect="AspectFill"
+                Margin="0,20,0,10">
+                
+            </Image>
+            <Border     
+                 Grid.Row="3"
+                 HeightRequest="50"
+                 Margin="20,20,20,20">
+                
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    Placeholder="Username"
+                    BackgroundColor="AliceBlue"
+                    Margin="15,2,0,0"
+                    FontFamily="kanitLight"
+                    x:Name="UserName">
+                </Entry>
+            </Border>
+
+            
+            
+            <Border     
+                 Grid.Row="4"
+                 HeightRequest="50"
+                 Margin="20,15,20,0">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Entry 
+                    IsPassword="True"
+                    Placeholder="Password"
+                    BackgroundColor="AliceBlue"
+                    FontFamily="kanitLight"
+                    FontAttributes="Bold"
+                    Margin="15,2,0,0"
+                    x:Name="PassWord">
+                </Entry>
+            </Border>
+
+
+            <Button
+                x:Name="forgotButton"
+                Grid.Row="5"
+                BackgroundColor="Transparent"
+                Text="Forgot Password ?"
+                WidthRequest="150"
+                HorizontalOptions="End"
+                FontFamily="kanitMedium"
+                TextColor="#5965D7"
+                Margin="0,5,8,5"
+                Clicked="forgotButton_Clicked">
+                
+            </Button>
+
+            <Button
+                Grid.Row="6"
+                WidthRequest="200"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="Login"
+                FontFamily="kanitLight"
+                CornerRadius="5"
+                BackgroundColor="#D33332"
+                Margin="0,10,0,0"
+                x:Name="loginButton"
+                Clicked="loginButton_Clicked">
+            </Button>
+
+            
+
+            <Grid 
+                Grid.Row="7" 
+                ColumnDefinitions="*,*"
+                Margin="50,50,30,30">
+                
+                <Label Text="Don't have an account ?"
+                        Grid.Row="0"
+                        HorizontalTextAlignment="Start"
+                        TextColor="#C6C6C6"/>
+                <Button
+                x:Name="signupButton"
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="Transparent"
+                Text="Create an account."
+                HorizontalOptions="End"
+                WidthRequest="150"
+                HeightRequest="40"
+                FontSize="14"
+                FontFamily="kanitMedium"
+                TextColor="#5965D7"
+                Margin="0,0,15,67"
+                Clicked="signupButton_Clicked"/>
+            
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+    
+    
+</ContentPage>

@@ -1,0 +1,36 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gunner.Views.MyPostPage"
+             Title="MyPostPage">
+    <Grid RowDefinitions="*,auto">
+        <ScrollView>
+            <Grid RowDefinitions="auto,auto">
+                <Label Text="เมนูของคุณ" FontSize="23" FontFamily="kanitBold" TextColor="#121212" Margin="20"/>
+                <CollectionView ItemsSource="{Binding postmodel}" Grid.Row="1">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BorderColor="#000" Margin="20,0,20,20">
+                                <Grid ColumnDefinitions="auto, *" RowDefinitions="auto">
+                                    <!-- Updated Button for Edit -->
+                                    <Button Text="Edit" Grid.Column="1" HorizontalOptions="End" WidthRequest="80" HeightRequest="30" VerticalOptions="Start" BackgroundColor="#D3333C" Clicked="editButton_Clicked"/>
+                                    <Image Source="{Binding ImagePath}" WidthRequest="100" Grid.Column="0" Margin="0,0,20,0"/>
+                                    <Label Text="{Binding Name}" Grid.Row="0" TextColor="#000" Grid.Column="1" FontFamily="kanitBold"/>
+                                    <Label Text="{Binding Category}" Grid.Row="0" TextColor="#000" Grid.Column="1" FontFamily="kanitMedium" Margin="0,25,0,0"/>
+                                    <Button Text="รายละเอียดเมนู" Grid.Row="0" Grid.Column="1" HeightRequest="40" Margin="0,60,0,0" FontFamily="kanitLight" Background="#D3333C" Clicked="Button_Clicked"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ScrollView>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*,*" BackgroundColor="#D9D9D9" HeightRequest="60">
+            <ImageButton Source="home" WidthRequest="30" HeightRequest="40" Grid.Column="0" Clicked="homeButton_Clicked"/>
+            <ImageButton Source="menu" WidthRequest="35" HeightRequest="45" Grid.Column="1" Clicked="menuButton_Clicked"/>
+            <ImageButton Source="add" WidthRequest="40" HeightRequest="50" Grid.Column="2" Clicked="addButton_Clicked"/>
+            <ImageButton Source="mark" WidthRequest="30" HeightRequest="35" Grid.Column="3" Clicked="markButton_Clicked"/>
+            <ImageButton Grid.Column="4" Source="logout" WidthRequest="30" HeightRequest="40" x:Name="logoutButton" Clicked="logoutButton_Clicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>

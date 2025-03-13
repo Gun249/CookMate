@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gunner.Views.addPage"
+             Title="addPage">
+    
+    <Grid RowDefinitions="*,auto">
+
+        <ScrollView>
+            <Grid Grid.Row="0" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto">
+
+                <Label Text="ใส่รูปภาพอาหาร" TextColor="#121212" FontSize="20" FontFamily="kanitBold" 
+                       Grid.Row="0" Margin="15,10,0,20"/>
+
+                <Image x:Name="imgfood" Grid.Row="1" WidthRequest="100" Margin="0,0,0,10" Source="Camera"/>
+
+                <Button x:Name="photoButton" Margin="50,0,50,20" Grid.Row="2" Text="Add Photo" 
+                        FontFamily="kanitMedium" BackgroundColor="#D3333C" Clicked="PhotoButton_Clicked"></Button>
+
+                <Label Text="หมวดหมู่" TextColor="#121212" FontSize="20" FontFamily="kanitBold" 
+                        Grid.Row="3" Margin="15,0,0,0"/>
+
+                <Border Grid.Row="4" Margin="15">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+
+                    <Entry Placeholder="ประเภท" HeightRequest="50" Margin="15,10,0,0" VerticalTextAlignment="Start" FontFamily="kanitLight" x:Name="Category"/>
+                </Border>
+
+
+                <Label Text="ชื่อเมนู" TextColor="#121212" FontSize="20" FontFamily="kanitBold" 
+                       Grid.Row="5" Margin="15,0,0,0"/>
+
+                <Border Grid.Row="6" Margin="15">
+                    
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+
+                    <Entry Placeholder="ชื่อเมนูอาหาร" HeightRequest="55" Margin="10,0,0,0" FontFamily="kanitLight" x:Name="FoodName"/>
+                    
+                </Border>
+
+                <Label Text="วัตถุดิบ" TextColor="#121212" FontSize="20" FontFamily="kanitBold" 
+                       Grid.Row="7" Margin="15,0,0,20"/>
+
+                <Grid Grid.Row="8" RowDefinitions="auto,auto">
+
+                    <ContentView x:Name="inputContainer" Grid.Row="0">
+                    <ContentView.Content>
+                            <StackLayout>
+                            </StackLayout>
+                    </ContentView.Content>
+                    </ContentView>
+
+                    <Button x:Name="entryButton" Margin="50,0,50,20" Grid.Row="1" Text="เพิ่มวัตถุดิบ" 
+                        FontFamily="kanitMedium" BackgroundColor="#D3333C" Clicked="entryButton_Clicked" ></Button>
+                </Grid>
+
+                <Label Text="ขั้นตอนการทำเมนู" TextColor="#121212" FontSize="20" FontFamily="kanitBold" 
+                        Grid.Row="9" Margin="15,0,0,0"/>
+                
+                <Border Grid.Row="10" Margin="15">
+
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+
+                    <Entry Placeholder="รายละเอียด" HeightRequest="500" Margin="15,10,0,0" VerticalTextAlignment="Start" FontFamily="kanitLight" x:Name="Details"/>
+
+                </Border>
+
+                <Grid Grid.Row="11"
+                      ColumnDefinitions="*,*"
+                      BackgroundColor="#D3333C">
+
+                    <Button x:Name="cancelButton" Margin="20,30,20,30" Grid.Column="0" Text="Cancel" 
+                            FontFamily="kanitMedium" BackgroundColor="#FFF" Clicked="cancelButton_Clicked"
+                            TextColor="#121212"></Button>
+
+                    <Button x:Name="postButton" Margin="20,30,20,30" Grid.Column="1" Text="Post" 
+                            FontFamily="kanitMedium" BackgroundColor="#FFF" Clicked="PostButton_Clicked"
+                            TextColor="#121212"></Button>
+                </Grid>
+
+
+            </Grid>
+        </ScrollView>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*,*"  BackgroundColor="#D9D9D9" HeightRequest="60">
+
+            <ImageButton Grid.Column="0" Source="home" WidthRequest="30" HeightRequest="40" x:Name="homeButton" Clicked="homeButton_Clicked"/>
+            <ImageButton Grid.Column="1" Source="menu" WidthRequest="35" HeightRequest="45" x:Name="menuButton" Clicked="menuButton_Clicked"/>
+            <ImageButton Grid.Column="2" Source="add"  WidthRequest="40" HeightRequest="50" x:Name="addButton"  Clicked="addButton_Clicked"/>
+            <ImageButton Grid.Column="3" Source="mark" WidthRequest="30" HeightRequest="35" x:Name="markButton" Clicked="markButton_Clicked"/>
+            <ImageButton Grid.Column="4" Source="logout" WidthRequest="30" HeightRequest="40" x:Name="logoutButton" Clicked="logoutButton_Clicked"/>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

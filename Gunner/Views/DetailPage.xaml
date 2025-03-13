@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gunner.Views.DetailPage"
+             Title="DetailPage">
+
+    <Grid RowDefinitions="*, auto, auto">
+
+        <ScrollView> 
+            <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" Grid.Row="0" BackgroundColor="#D3333C">
+
+                <Grid ColumnDefinitions="*,auto" Grid.Row="0" HeightRequest="100" Margin="0,0,0,-20">
+
+                    <Label x:Name="nameText" TextColor="#FFF" Grid.Column="0" FontFamily="kanitBold" Margin="20" FontSize="23" HorizontalOptions="Start"/>
+                    <ImageButton x:Name="starButton" Grid.Column="1" Margin="20,-28,14,0" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Start" Clicked="StarButton_Clicked"/>
+                </Grid>
+
+                <Frame BorderColor="#FFF" Grid.Row="1" WidthRequest="215" HeightRequest="215" />
+                <Image x:Name="selectedImage" Grid.Row="1" WidthRequest="200"/>
+
+                <Label Text="วัตถุดิบ" TextColor="#FFF" Grid.Row="2" FontFamily="kanitBold" Margin="20" FontSize="20"/>
+                <Label x:Name="rawText" TextColor="#FFF" Grid.Row="3" FontFamily="kanitLight" Margin="30,0,20,20" FontSize="16"/>
+            
+                <Label Text="ขั้นตอนการทำเมนู" TextColor="#FFF" Grid.Row="4" FontFamily="kanitBold" Margin="20,0,20,20" FontSize="20"/>
+                <Label x:Name="descriptionText" TextColor="#FFF" Grid.Row="5" FontFamily="kanitLight" Margin="30,0,20,20" FontSize="16"/>
+            </Grid>
+        </ScrollView>
+
+        <Grid Grid.Row="1" BackgroundColor="#D5C000" ColumnDefinitions="*,*">
+            <Button x:Name="shareButton" Text="Share" Grid.Column="0" 
+                    FontFamily="kanitMedium" BackgroundColor="#FFF" 
+                    TextColor="#121212" Margin="20,30" Clicked="shareButton_Clicked"/>
+            <Button x:Name="deleteButton" Text="Delete" Grid.Column="1" 
+                    FontFamily="kanitMedium" BackgroundColor="#FFF" 
+                    TextColor="#121212" Margin="20,30" Clicked="deleteButton_Clicked"/>
+        </Grid>
+        
+
+
+        <Grid Grid.Row="2" ColumnDefinitions="*,*,*,*,*"  BackgroundColor="#D9D9D9" HeightRequest="60">
+
+            <ImageButton Grid.Column="0" Source="home" WidthRequest="30" HeightRequest="40" x:Name="homeButton" Clicked="homeButton_Clicked"/>
+            <ImageButton Grid.Column="1" Source="menu" WidthRequest="35" HeightRequest="45" x:Name="menuButton" Clicked="menuButton_Clicked"/>
+            <ImageButton Grid.Column="2" Source="add"  WidthRequest="40" HeightRequest="50" x:Name="addButton"  Clicked="addButton_Clicked"/>
+            <ImageButton Grid.Column="3" Source="mark" WidthRequest="30" HeightRequest="35" x:Name="markButton" Clicked="markButton_Clicked"/>
+            <ImageButton Grid.Column="4" Source="logout" WidthRequest="30" HeightRequest="40" x:Name="logoutButton" Clicked="logoutButton_Clicked"/>
+
+        </Grid>
+    </Grid>
+</ContentPage>
