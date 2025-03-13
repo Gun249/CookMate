@@ -24,10 +24,6 @@ Those looking for an easy-to-use cooking assistant.
 
 People interested in sharing their unique recipes with a broader community.
 
-Project Description
-
-CookMate is a mobile application designed to provide users with an engaging and intuitive platform to learn, create, and share various recipes. The application enhances the cooking experience by offering step-by-step guides, personalized menu creation, and an easy-to-use interface for food enthusiasts of all levels.
-
 Application Usage
 
 Log in: Use your credentials to access the app.
